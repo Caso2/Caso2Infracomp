@@ -19,7 +19,8 @@ public class ProcesoUno {
 	}
 	
 	public void hacerTodo() throws IOException {
-		File archivo = new File("C:\\a_semestre_v\\INFRACOMP\\basura\\InfraComp\\InfraComp\\caso2_jbarrios_sepenuela\\casoDos\\docs/procesoUno.txt");
+		String direccion = "direccion";
+		File archivo = new File(direccion);
 		FileWriter escritor = new FileWriter(archivo);
 		escritor.write("TP="+sizePag +"\n");
 		escritor.write("NF="+filas+"\n");
