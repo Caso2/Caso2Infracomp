@@ -16,7 +16,7 @@ public class Principal {
 	public static void main(String[] args) throws IOException {
 
 		Principal instancia = new Principal();
-		File archivo = new File("direccion");
+		File archivo = new File("C:/a_semestre_v/INFRACOMP/basura/InfraComp/InfraComp/caso2_jbarrios_sepenuela/casoDos/docs/inicial.txt");
 		
 		
 		try (FileReader lector = new FileReader(archivo); BufferedReader br = new BufferedReader(lector);) {
@@ -39,7 +39,10 @@ public class Principal {
 
 		}
 		ProcesoUno procesoUno = new ProcesoUno(filas, cols, bytesInt, sizePag, numMarcos);
-		procesoUno.hacerTodo();
+		String nomArchivo = procesoUno.hacerTodo();
+		ProcesoDos procesoDos = new ProcesoDos (numMarcos, nomArchivo);
+		procesoDos.hacerTodo();
+		
 	}
 	
 	
