@@ -31,7 +31,7 @@ public class ThreadSuma extends Thread{
 					{
 						procesoDos.addNumFallas();
 						procesoDos.setpagNecesaria(paginaNeeded);
-						while(procesoDos.getpagNecesaria()>=0)
+						while(procesoDos.getPagNecesaria()>=0)
 						{
 							try {
 								this.wait();

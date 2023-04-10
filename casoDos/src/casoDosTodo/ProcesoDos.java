@@ -25,6 +25,7 @@ public class ProcesoDos {
 	private static int virtualAdres[][][][];
 	private static ArrayList<ArrayList<String>> simulacionDisco = new  ArrayList<ArrayList<String>>(); 
 	private static int[] tablaPaginas;
+	private static int paginaCambiable = -1;
 	
 	public ProcesoDos(int numMarcos, String nombreArchivo) {
 		this.numMarcos = numMarcos;
@@ -208,10 +209,7 @@ public class ProcesoDos {
 		
 	}
 
-	public int getpagNecesaria() {
-		// TODO Auto-generated method stub
-		return pagNecesaria;
-	}
+	
 
 	public synchronized void setPagsOperacion(int[] pagsOperacion) {
 		// TODO Auto-generated method stub
@@ -236,5 +234,27 @@ public class ProcesoDos {
 	public void updateLru(int[][] lruPaModificar) {
 		// TODO Auto-generated method stub
 		this.lruInfo = lruPaModificar;
+	}
+
+	public void setPagCambiable(Integer integer) {
+		// TODO Auto-generated method stub
+		this.paginaCambiable = integer;
+	}
+
+	public int getPagCambiable() {
+		// TODO Auto-generated method stub
+		return this.paginaCambiable;
+	}
+
+	public void actualizarTabla() {
+		// TODO Auto-generated method stub
+		int paginaPaDisco = tablaPaginas[paginaCambiable];
+		tablaPaginas[paginaCambiable]= pagNecesaria;
+		
+	}
+
+	public void setEstaCorriendo(boolean b) {
+		// TODO Auto-generated method stub
+		estaCorriendo = b;
 	}
 }
