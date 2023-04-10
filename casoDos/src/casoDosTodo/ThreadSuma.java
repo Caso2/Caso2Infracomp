@@ -46,5 +46,6 @@ public class ThreadSuma extends Thread{
 				
 			}
 		}
+		procesoDos.setEstaCorriendo(false);
 	}
 }
